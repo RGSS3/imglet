@@ -67,7 +67,7 @@ async def txt2img(request: Request):
     payload = get_payload_from_query(request, overescape=False)
     return await handle_txt2img(payload)
 
-@app.get("/txt2img-overescape")
+@app.get("/newtxt2img")
 async def txt2img_overescape(request: Request):
     payload = get_payload_from_query(request, overescape=True)
     return await handle_txt2img(payload)
